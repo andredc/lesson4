@@ -6,17 +6,17 @@ L'applicativo è stato sviluppato partendo dall'esempio base lesson 4 e cercando
 
 #Modifiche Apportate
 
--Aggiunta dei Task
-    I task hanno attributi aggiuntivi rispetto alle note: Titolo, Descrizione, Priorità, Stato, Tag, Data
--Differenti metodi di visualizzazione dei Task
-    I task possono essere visualizzati in 3 modi: List, Grid e Card.
+* Aggiunta dei Task
+   * I task hanno attributi aggiuntivi rispetto alle note: Titolo, Descrizione, Priorità, Stato, Tag, Data
+* Differenti metodi di visualizzazione dei Task
+  *  I task possono essere visualizzati in 3 modi: List, Grid e Card.
     In tutte e 3 visualizzazioni è possibile modificare la Priorità e lo Stato del task cliccandovi opportunamente
--Possibilità di modifica dei Task
-    Priorità e Stato dei task possono essere modificati direttamente dalla schermata di visualizzazione di questi ultimi.
+* Possibilità di modifica dei Task
+  *  Priorità e Stato dei task possono essere modificati direttamente dalla schermata di visualizzazione di questi ultimi.
     Per modifiche ad altri attributi è stata aggiunta una pagina di edit.
--Funzionalità di ordinamento e ricerca
-    I task possono essere filtrati e ordinati per Titolo, Descrizione, Data, Priorità e Stato 
--Selezione multipla per modifica dello stato priorità e cancellazione dei task
+* Funzionalità di ordinamento e ricerca
+  *  I task possono essere filtrati e ordinati per Titolo, Descrizione, Data, Priorità e Stato 
+* Selezione multipla per modifica dello stato priorità e cancellazione dei task
 
 #Struttura Applicazione
 
