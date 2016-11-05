@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+
+	<!-- Angular Material style sheet -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- App Styles -->
+	<link rel="stylesheet" href="style/styles.css">
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	<!-- Code Behind -->
+
+	<script src="app/todoApp.module.js"></script>
+
+	<script src="app/note/note.module.js"></script>
+	<script src="app/note/note.controller.js"></script>
+	<script src="app/note/note.customList.directive.js"></script>
+	<script src="app/note/note.storage.service.js"></script>
+
+	<script src="app/task/task.module.js"></script>
+	<script src="app/task/task.controller.js"></script>
+	<script src="app/task/task.customList.directive.js"></script>
+	<script src="app/task/task.customGrid.directive.js"></script>
+	<script src="app/task/task.customCard.directive.js"></script>
+
+	<script src="app/task/task.storage.service.js"></script>
+
+	<script src="app/form/form.controller.js"></script>
+	<script src="app/edit/edit.controller.js"></script>
+	<script src="app/book/book.controller.js"></script>
+
+
+</head>
+
+<body ng-app="todoApp" class="no-scroll">
+	<div ng-controller="NoteController as ctrl" class="no-scroll">
+
+		<md-content class="no-scroll" ng-view></md-content>
+
+	</div>
+	</md-content>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<md-content class="md-padding scroll tab-content">
+	<md-grid-list md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="2:2"
+		md-gutter="12px" md-gutter-gt-sm="8px">
+		<md-grid-tile class="gray" md-rowspan="1" md-colspan="2" md-colspan-sm="2" md-colspan-xs="1" ng-repeat="item in customGridCtrl.items | filter: customGridCtrl.filterFunction | orderBy: tctrl.order"
+			ng-class="customGridCtrl.getPriority(item)">
+			<span flex>
+           <h4>Description:</h4>
+           <h5> {{item.description}} </h5>
+               </span>
+			<span flex>
+               <h5>Estimated work:</h5><h5> {{item.estimatedwork}}</h5>
+                 </span>
+
+			<span flex>
+                 <h5 class="md-primary md-align-buttom-right">Selected: <md-checkbox  ng-model="item.sel" ng-change="customGridCtrl.toggleSelection(item)" class="md-primary md-align-top-right"> 
+            </md-checkbox>           </h5><h5 class="md-primary md-align-buttom-right">  Status: <md-checkbox ng-model="item.status" ng-change="customGriddCtrl.checkStateChanged()"> </h5>
+                 <md-button   ng-href="\edit\{{item.title}}">Edit</md-button>
+                </span>
+
+			<md-grid-tile-footer>
+				<div>
+					<h3>
+						<md-button ng-click="customGridCtrl.changePriority(item)" class="md-icon-button" aria-label="Priority">
+							<md-icon style="color: green" ng-if="item.priority == -1">low_priority</md-icon>
+							<md-icon ng-if="item.priority == 0">label</md-icon>
+							<md-icon style="color: red" ng-if="item.priority == 1">priority_high</md-icon>
+						</md-button> Date: {{item.date | date: "dd-MM-yyyy"}} Tags: {{item.tags}} </h3>
+				</div>
+
+
+			</md-grid-tile-footer>
+			<md-grid-tile-header>
+				<h3>
+					<h3>Title: {{item.title}}</h3>
+				</h3>
+			</md-grid-tile-header>
+
+		</md-grid-tile>
+
+
+
+</md-content>

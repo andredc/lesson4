@@ -1,0 +1,36 @@
+<md-content class="md-padding scroll tab-content">
+	<md-list>
+		<md-list-item class="md-2-line" ng-repeat="item in customListCtrl.items | filter: customListCtrl.filterFunction  | orderBy: tctrl.order "
+			ng-class="item.sel == 1 ? 'selected':''" order-by="item.date" ng-click="customListCtrl.toggleSelection(item)">
+
+			<md-button ng-click="customListCtrl.changePriority(item)" class="md-icon-button" aria-label="Priority">
+				<md-icon style="color: green" ng-if="item.priority == -1">low_priority</md-icon>
+				<md-icon ng-if="item.priority == 0">label</md-icon>
+				<md-icon style="color: red" ng-if="item.priority == 1">priority_high</md-icon>
+			</md-button>
+
+			<div class="md-list-item-text">
+				<h2>Title: {{item.title}}</h2>
+				<h4>Description: {{item.description}} </h3>
+					<h5>Tags: {{item.tags}}</h5>
+					<h5>Estimated work: {{item.estimatedwork}}</h5>
+					<p>Date: {{item.date | date: "dd-MM-yyyy HH:mm"}}</p>
+
+			</div>
+			<div>
+				<h4 class="md-primary md-align-buttom-right">Selected :
+					<md-checkbox ng-model="item.sel" ng-change="customListCtrl.toggleSelection(item)" class="md-primary md-align-top-right">
+					</md-checkbox>
+				</h4>
+
+				<h4 class="md-primary md-align-buttom-right"> Status:
+					<md-checkbox ng-model="item.status" ng-change="customListCtrl.checkStateChanged()">
+				</h4>
+			</div>
+			<md-button ng-href="\edit\{{item.title}}">Edit</md-button>
+
+			<md-divider></md-divider>
+		</md-list-item>
+	</md-list>
+
+</md-content>

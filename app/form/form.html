@@ -1,0 +1,69 @@
+<md-content layout-padding class="scroll">
+	<div>
+		<form name="taskForm">
+			<md-container class="md-block" flex-gt-sm>
+
+				<h2>Add your task</h2>
+			</md-container>
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Title</label>
+				<input ng-model="fctrl.task.title" required>
+			</md-input-container>
+
+
+
+
+			<md-input-container class="md-block">
+				<label>Description</label>
+				<textarea ng-model="fctrl.task.description" md-maxlength="150" rows="5" md-select-on-focus required></textarea>
+			</md-input-container>
+
+			<md-input-container class="md-block" flex-gt-sm>
+				<label>Tags</label>
+				<input ng-model="fctrl.task.tags" required>
+			</md-input-container>
+
+			<div layout-gt-sm="row">
+
+
+
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Priority</label>
+					<md-select name="type" ng-model="fctrl.task.priority" required>
+						<md-option value="-1">Low</md-option>
+						<md-option value="0">Normal</md-option>
+						<md-option value="1">High</md-option>
+					</md-select>
+				</md-input-container>
+
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Status</label>
+					<md-select name="type" ng-model="fctrl.task.status" required>
+						<md-option value="0">Complete</md-option>
+						<md-option value="1">Incomplete</md-option>
+					</md-select>
+				</md-input-container>
+
+
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Estimated work (hours)</label>
+					<input ng-model="fctrl.task.estimatedwork" required>
+				</md-input-container>
+
+				<md-input-container class="md-block" flex-gt-sm>
+					<label>Date</label>
+					<md-datepicker ng-model="fctrl.task.date" required></md-datepicker>
+				</md-input-container>
+
+			</div>
+
+			<div>
+				<md-button type="submit" ng-click="fctrl.submit(fctrl.task)" ng-href="/task">Submit</md-button>
+				<md-button type="back" ng-click="fctrl.clearForm()" ng-href="/task">Back</md-button>
+
+			</div>
+
+
+		</form>
+	</div>
+</md-content>

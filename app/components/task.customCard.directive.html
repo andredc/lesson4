@@ -1,0 +1,30 @@
+<md-content class="md-padding scroll tab-content">
+
+	<div flex-xs flex-gt-xs="50" layout="column" ng-repeat="item in customCardCtrl.items | filter: customCardCtrl.filterFunction  | orderBy: tctrl.order"
+		ng-class="customCardCtrl.getPriority(item)">
+		<md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+			<md-card-title>
+				<md-card-title-text>
+					<span class="md-headline">
+        <h3><h3>Title: {{item.title}}</h3></h3></span>
+					<span class="md-subhead"> <h4> <md-button ng-click="customCardCtrl.changePriority(item)" class="md-icon-button" aria-label="Priority">
+                <md-icon style="color: green" ng-if="item.priority == -1">low_priority</md-icon>
+                <md-icon ng-if="item.priority == 0">label</md-icon>
+                <md-icon style="color: red" ng-if="item.priority == 1">priority_high</md-icon>
+            </md-button> 
+                Description: {{item.description}}  </h4></span>
+
+				</md-card-title-text>
+
+				<md-card-actions layout="row" layout-align="end center">
+					<span>  <h4 class="md-primary md-align-buttom-right">Selected : <md-checkbox  ng-model="item.sel" ng-change="customCardCtrl.toggleSelection(item)" class="md-primary md-align-top-right"> 
+            </md-checkbox>           </h4><h4 class="md-primary md-align-buttom-right">  Status: <md-checkbox ng-model="item.status" ng-change="customCardCtrl.checkStateChanged()"> </h4>
+<md-button class="md-primary md-align-buttom-right"  ng-href="\edit\{{item.title}}">Edit</md-button></span>
+
+			</md-card-title>
+
+			</md-card-actions>
+		</md-card>
+	</div>
+
+</md-content>
