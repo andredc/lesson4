@@ -36,7 +36,7 @@ L'applicativo è stato sviluppato partendo dall'esempio base lesson 4 e cercando
    * form.controller.js
  * note  
    * note.html
-   * note.module.js
+    * note.module.js
    * note.controller.js
    * note.customList.directive.js
    * note.storage.service.js
