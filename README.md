@@ -22,25 +22,25 @@ L'applicativo è stato sviluppato partendo dall'esempio base lesson 4 e cercando
 
 
     
-app
-* components  
+* app
+ * components  
   * note.customList.directive.html  
   * task.customCard.directive.html  
   * task.customGrid.directive.html  
   * task.customList.directive.html  
-* edit
+ * edit
   * edit.html
   * edit.controller.js
-* form
+ * form
   * form.html
   * form.controller.js
-* note  
+ * note  
   * note.html
   * note.module.js
   * note.controller.js
   * note.customList.directive.js
   * note.storage.service.js
-* task
+ * task
   * task.html
   * task.controller.js
   * task.customCard.directive.js
@@ -48,10 +48,8 @@ app
   * task.customList.directive.js
   * task.module.js
   * task.storage.service.js
-* todoApp.module.js  
-
-style
-  * style.css
-  
-index.html  
-README.md
+ * todoApp.module.js  
+* style
+ * style.css 
+* index.html  
+* README.md
